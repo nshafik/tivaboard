@@ -1,0 +1,23 @@
+void data_parsing(void)
+{
+
+				while(uart1_read() == 'L' && uart1_read() != 'E'){
+				int i,j;
+				/*for (i=0 ; i<11 ; i++){
+				arrN[i] = uart1_read();
+					uart0_write(arrN[i+1]);
+				
+				}
+					*/
+			
+				
+					
+				for(j=0;j<25;j++)
+				{
+					arrE[j] = uart1_read();
+					uart0_write(arrE[j+15]);
+					
+				}
+				
+			}
+		}
