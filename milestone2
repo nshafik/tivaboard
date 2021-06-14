@@ -148,7 +148,7 @@ float mintodeg(float x) {
     int xint = minx;
     float deg = minx - xint;
     deg = deg / 60 + minx;
-    printf("%f", deg);
+    deg= deg * 10000000 /90 ;
     return deg;
 }
 
