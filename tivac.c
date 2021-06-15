@@ -24,6 +24,8 @@ double deg2rad(double deg);
 
 void LED_Init(void);
 void LedFunc(double x);
+void seg_Init(void);
+
 
 
 
