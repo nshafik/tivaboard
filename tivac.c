@@ -301,8 +301,9 @@ void getdata(double* N, double* E) {
         }
     }
     if( strstr( arr1 , "GPGGA" )){
-
+        //check fix quality zuerst
         //strtok wahot el array fel north wel east
+        
     }
     
 
