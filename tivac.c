@@ -39,7 +39,7 @@ void seg_Init(void);
 
 
 
-
+ 
 
 
 
@@ -288,43 +288,23 @@ void getdata(double* N, double* E) {
 
     int i, j;
 
-    char arr[7], arr1[26];
+    char arr1[26];
     char arrN[9], arrE[10];
 
-    char ggp[6] = { 'G','P','G','L','L','A' };
     char m;
 
     m = uart1_read();
 
     if (m == '$') {
-        m = uart1_read();
-
-        for (i = 0; i < 6; i++) {
-            arr[i] = uart1_read();
-            if (arr[i] == ggp[i] & i == 5) {
-
-                for (i = 0; i < 25; i++) {
-                    arr[i] = uart1_read();
-                }
-
-                for (j = 0; j < 8; j++)
-                {
-                    arrN[j] = arr[i + 1];
-                }
-                for (j = 0; j < 9; j++)
-                {
-                    arrE[j] = arr1[i + 16];
-                }
-
-
-
-
-            }
-            else {
-                break;
-            }
+        for (i = 0; i < 26; i++) {
+            arr1[i] = uart1_read();
         }
     }
+    if( strstr( arr1 , "GPGGA" )){
+
+        //strtok wahot el array fel north wel east
+    }
+    
 
 
 
